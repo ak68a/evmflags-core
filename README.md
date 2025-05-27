@@ -1,66 +1,10 @@
-## Foundry
+# EVMFlags
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized feature flag registry for EVM-compatible blockchains, currently deployed on Radius (https://radiustech.xyz). This system provides granular control over feature flags through multiple access levels:
 
-Foundry consists of:
+- Global flags that apply to all users
+- User-specific flags for individual address control
+- Version-specific flags for contract version targeting
+- Group-based flags for managing access tiers and user groups
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+The system supports creating and managing user groups, allowing efficient feature flag management for different access tiers (e.g., Premium users, Beta testers, Early access). Each flag can be enabled at any combination of these levels, with a clear precedence order: user-specific flags take highest priority, followed by group flags, and finally global flags.
