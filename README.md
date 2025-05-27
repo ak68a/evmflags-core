@@ -1,6 +1,6 @@
 # EVMFlags
 
-A decentralized feature flag registry for EVM-compatible blockchains, currently deployed on Radius (https://radiustech.xyz). This system provides granular control over feature flags through multiple access levels:
+A decentralized feature flag registry for EVM-compatible blockchains, for [Radius](https://radiustech.xyz) smart contracts. This system provides granular control over feature flags through multiple access levels:
 
 - Global flags that apply to all users
 - User-specific flags for individual address control
