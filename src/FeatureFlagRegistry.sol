@@ -56,7 +56,7 @@ contract FeatureFlagRegistry is Ownable {
     /// @param flag The feature flag identifier
     /// @param user The user address to check
     /// @return bool True if the flag is enabled for the user
-    function isEnabled(bytes32 flag, address user) external view returns (bool) {
+    function isEnabled(bytes32 flag, address user) external view virtual returns (bool) {
         return _isEnabledInternal(flag, user);
     }
     
